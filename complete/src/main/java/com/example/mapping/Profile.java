@@ -8,10 +8,10 @@ public class Profile {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
     private String userName;
-    private String[] repositories;
+    private Integer repositories;
     private String company;
 
-    public Profile(String userName, int age, String[] repositories) {
+    public Profile(String userName, int id, Integer repositories, String company) {
         this.userName = userName;
         this.id = id;
         this.repositories = repositories;
@@ -26,17 +26,17 @@ public class Profile {
     }
 
     
-    public Integer getUserName() {
+    public String getUserName() {
         return userName;
     }
-    public void setUserName(Integer userName) {
+    public void setUserName(String userName) {
         this.userName = userName;
     }
 
-    public Integer getCompany() {
+    public String getCompany() {
         return company;
     }
-    public void setCompany(Integer company) {
+    public void setCompany(String company) {
         this.company = company;
     }
 
@@ -46,5 +46,7 @@ public class Profile {
     public void setRepositories(Integer repositories) {
         this.repositories = repositories;
     }
+}
+
 
 
